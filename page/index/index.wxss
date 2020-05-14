@@ -1,0 +1,6 @@
+/* page/index/index.wxss */
+.title{
+  color: blueviolet;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
