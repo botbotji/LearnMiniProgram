@@ -2,3 +2,4 @@
 <text class="title">Hello World</text>
 <button size="mini">按钮</button>
 <image src=""></image>
+<view>测试Git tag方式提交</view>
