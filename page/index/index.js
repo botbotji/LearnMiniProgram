@@ -5,62 +5,59 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    title: 'Hello World',
+    age: 18,
+    counter: 0,
+    student: [
+      {id: 10, name: 'keke',age:18},
+      {id: 1, name: 'keke0',age:18},
+      {id: 0, name: 'keke1',age:18},
+      {id: 20, name: 'keke2',age:18}
+    ],
+    list: []
+},
+  handleBanClick(){
+    console.log('按钮发生点击点击事件')
+    this.data.counter += 1
+    console.log(this.data.counter)
+    this.setData({
+      counter: this.data.counter
+    })
+  },
+  handleSubClick(){
+    this.setData({
+      counter: this.data.counter -1
+    })
+  },
+  handleGetUserInfo(e){
+    console.log(e)
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  //------------1.监听页面的生命周期函数--------------
+  onLoad: function(){
+    //生命周期回调—监听页面加载
+    wx.request({
+      url: 'url',
+      success: (res)=>{
+          console.log(res)
+          const data = res.data.data.list;
+          this.setData({
+            list: data
+          })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onShow(){
+    // 生命周期回调—监听页面显示
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  onReady(){
+    // 生命周期回调—监听页面初次渲染完成
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  onHide: function(){
+    // 生命周期回调—监听页面隐藏
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onUnload(){
+    // 生命周期回调—监听页面卸载,页面跳转
   }
+
 })

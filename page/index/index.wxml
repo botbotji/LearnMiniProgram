@@ -1,4 +1,25 @@
 <!--page/index/index.wxml-->
-<text class="title">Hello World</text>
-<button size="mini">按钮</button>
-<image src=""></image>
+<!-- 数据绑定 -->
+<view>{{title}}</view>
+<view>年龄：{{age}}</view>
+<!-- 列表展示 -->
+<view>{{student[0].name}}</view> 
+<view>{{student[2].id}}</view>
+<view>{{student[1].age}}</view>
+
+<!-- 列表展示 -->
+<view wx:for="{{student}}">{{index}}--{{item.name}}--{{item.id}}--{{item.age}}</view>
+
+<!-- 事件监听改变data -->
+<view>当前计数：{{counter}}</view>
+<button size="mini" bindtap="handleBanClick">+</button>
+<button size="mini" bindtap="handleSubClick">-</button>
+<!-- 授权获取用户信息 -->
+<button size="mini" 
+open-type='getUserInfo' 
+bindgetuserinfo="handleGetUserInfo"
+>
+获取授权</button>
+
+<open-data type="userNickName"></open-data>
+<open-data size = "mini"type="userAvatarUrl"></open-data>
