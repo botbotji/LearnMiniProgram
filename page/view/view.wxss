@@ -1,0 +1,31 @@
+/* page/view/view.wxss */
+.page-section-spacing{
+  height: 100px;
+  width: 100px;
+  background: aqua;  
+}
+.hover-view{
+  background: blueviolet;
+}
+.container{
+  background: burlywood;
+  white-space: nowrap; 
+  /* 不换行 */
+}
+.item1{
+width: 100px;
+height: 100px;
+background: darkblue;
+margin: 10px;
+display: inline-block;
+}
+
+.container2{
+background: darkgoldenrod;
+height: 200px;
+}
+.item2{
+height: 100px;
+background: blueviolet;
+margin: 10px;
+}

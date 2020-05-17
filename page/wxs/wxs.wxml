@@ -1,0 +1,26 @@
+<!--page/wxs/wxs.wxml-->
+<text>page/wxs/wxs.wxml</text>
+<!-- wxs定义方式 -->
+<!-- 第一种方式，直接在WXML中定义 -->
+<!-- 注意代码缩进格式否则会报错 -->
+<!-- <wxs module="info">
+  //JS代码 ES5的语法
+  var message = "Hello World";
+  var name = "coderwhy";
+
+  var sum = function(num1,num2){
+      return num1 + num2;
+  }
+  module.exports = {
+    message: message,
+    name: name,
+    sum: sum
+  }
+</wxs> -->
+
+<!-- 第二种方式：定义在单独的wxs文件，导入方式 -->
+<!-- 注意这里必须是相对路径，否则会报错 -->
+<wxs src="../../info/info.wxs" module="info"/>
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sum(20,20)}}</view>

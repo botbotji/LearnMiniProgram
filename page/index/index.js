@@ -1,66 +1,71 @@
 // page/index/index.js
-Page({
-
-  /**
-   * 页面的初始数据
-   */
+const types = ['default', 'primary', 'warn']
+const pageObject = {
   data: {
-
+    defaultSize: 'default',
+    primarySize: 'default',
+    warnSize: 'default',
+    disabled: false,
+    plain: false,
+    loading: false
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onShareAppMessage() {
+    return {
+      title: 'button',
+      path: 'page/component/pages/button/button'
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  setDisabled() {
+    this.setData({
+      disabled: !this.data.disabled
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  setPlain() {
+    this.setData({
+      plain: !this.data.plain
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  setLoading() {
+    this.setData({
+      loading: !this.data.loading
+    })
+  },
+  
+  handleContact(e) {
+    console.log(e.detail)
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  handleGetPhoneNumber(e) {
+    console.log(e.detail)
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  handleGetUserInfo(e) {
+    console.log(e.detail)
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  handleOpenSetting(e) {
+    console.log(e.detail.authSetting)
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleGetUserInfo(e) {
+    console.log(e.detail.userInfo)
   }
-})
+}
+
+for (let i = 0; i < types.length; ++i) {
+  (function (type) {
+    pageObject[type] = function () {
+      const key = type + 'Size'
+      const changedData = {}
+      changedData[key] =
+        this.data[key] === 'default' ? 'mini' : 'default'
+      this.setData(changedData)
+    }
+  }(types[i]))
+}
+
+Page(pageObject)
