@@ -1,66 +1,68 @@
 // page/index/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
+    titles:['flex布局','组件','动力']
+  },
+  bindButton:function(event){
+    console.log("点击事件发生了",event)
+  },
+  halderTouchstart:function(event){
+    console.log("手指触摸动作开始",event)
+  },
+  handlerTouchmove:function(){
+    console.log("手指触摸后移动")
+  },
+  handlertouchend:function(event){
+    console.log("手指触摸动作结束",event)
+  },
+  handlertouchcancel:function(){
+    console.log("手指触摸动作被打断，如来电提醒，弹窗")
+  
+  },
+  handlertap:function(){
+    console.log("点击事件")
+  
+  },
+  handlerlongtap:function(){
+    console.log("手指触摸后，超过350ms在离开，")
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handlerpress:function(){
+    console.log("手指触摸后，超过350ms在离开，如果指定了事件回调函数并触发了这个事件，tap事件将不被触发")
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handlerEventClick:function(event){
+    console.log("---------",event)
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handlerInner:function(event){
+    console.log(event)
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handlerOuter:function(event){
+    console.log(event)
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  handler:function(event){
+    console.log(event)
+    //事件参数传递 wxml组件属性 格式：data-属性名称 
+    //在调试窗口console 输出的event对象中的currentTarget和target中的dataset就可以看到
+    const itemName = event.currentTarget.dataset.item
+    const index = event.currentTarget.dataset.index
+    console.log(itemName,index)
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  handlerCaptureView1:function(){
+    console.log("捕获1")
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  handlerCaptureView2:function(){
+    console.log("捕获2")
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handlerCaptureView3:function(){
+    console.log("捕获3")
+  },
+  handlerBindView1:function(){
+    console.log("冒泡1")
+  },
+  handlerBindView2:function(){
+    console.log("冒泡2")
+  },
+  handlerBindView3:function(){
+    console.log("冒泡3")
   }
 })

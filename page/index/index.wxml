@@ -1,5 +1,52 @@
 <!--page/index/index.wxml-->
-<text class="title">Hello World</text>
-<button size="mini">按钮</button>
-<image src=""></image>
-<view>测试Git tag方式提交</view>
+<view>事件处理回顾</view>
+<button bindtap="bindButton">按钮</button>
+<!-- 1.5之后的写法 -->
+<button bind:tap="bindButton" size="mini">按钮</button>
+<button catch:tap="bindButton">按钮</button>
+
+<!-- 常见事件 -->
+<view class="box" 
+      bind:touchstart="halderTouchstart"
+      bindtouchmove="handlerTouchmove"
+      bindtouchend="handlertouchend"
+      bindtouchcancel="handlertouchcancel"
+      bindtap="handlertap"
+      bindlongtap="handlerlongtap"
+      bindlongpress="handlerpress">常见事件类型</view>
+
+<!-- 事件对象的分析 -->
+<button size="mini" bindtap="handlerEventClick">事件对象</button>
+
+<view id="outer" class="outer" bindtap="handlerOuter">
+  <view id="inner" class="inner" bindtap="handlerInner"></view>
+</view>
+
+<view class="con">
+  <block wx:for="{{titles}}" wx:key="{{index}}">
+    <view class="item" 
+          data-index="{{index}}"
+          data-item="{{item}}"
+          bindtap="handler">
+        {{item}}
+    </view>
+  </block>
+</view>
+
+
+<!-- 事件冒泡bindtap="handlerBindView1"和事件捕获 capture-bind:tap=""-->
+<!-- bind: 一层层传递 -->
+<!-- catch：阻止事件一层层传递 -->
+<view class="view1" capture-bind:tap="handlerCaptureView1" bindtap="handlerBindView1">
+  <view class="view2" capture-bind:tap="handlerCaptureView2" bindtap="handlerBindView2">
+    <view class="view3" capture-bind:tap="handlerCaptureView3" bindtap="handlerBindView3"></view>
+  </view>
+</view>
+
+<view>阻止事件冒泡 catch</view>
+<view class="view1" capture-bind:tap="handlerCaptureView1" bindtap="handlerBindView1">
+  <view class="view2" capture-catch:tap="handlerCaptureView2" bindtap="handlerBindView2">
+    <view class="view3" capture-bind:tap="handlerCaptureView3" bindtap="handlerBindView3"></view>
+  </view>
+</view>
+<!-- 事件捕获--》冒泡是有顺序的，某一位置用catch就会捕获到其 -->
