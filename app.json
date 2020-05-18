@@ -1,7 +1,7 @@
 {
   "pages": [
     "page/index/index",
-    "page/home/home",
-    "page/logs/logs"
-  ]
+    "component/component-scan/component-scan"
+  ],
+  "sitemapLocation": "sitemap49.json"
 }

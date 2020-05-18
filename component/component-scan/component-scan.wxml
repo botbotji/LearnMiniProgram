@@ -1,0 +1,5 @@
+<!--component/component-scan/component-scan.wxml-->
+<view class="title">{{title}}</view>
+<view class="content">{{message}}</view>z
+<button bindtap="onTap">点击这个按钮将触发“myevent”事件</button>
+

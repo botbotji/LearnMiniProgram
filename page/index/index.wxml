@@ -1,5 +1,18 @@
 <!--page/index/index.wxml-->
-<text class="title">Hello World</text>
-<button size="mini">按钮</button>
-<image src=""></image>
-<view>测试Git tag方式提交</view>
+
+<!-- 引入component-scan组件 -->
+<!-- <view> -->
+  <!-- 这部分内容会被放置在组件<solt>的位置 -->
+  <!-- <component-scan  prop-a="{{dataFileA}}" prop-b="dataFieldB"> -->
+      <!-- 这里是插入组件<solt>de 位置上 -->
+      <!-- <view solt="before">这里是插入组件<solt>的位置上</view> -->
+      <!-- <view solt="after">这里是插入组件<solt>的位置上</view> -->
+  <!-- </component-scan> -->
+<!-- </view> -->
+
+<!-- <custom-component>yellow</custom-component> -->
+
+<!-- 会调用"onMyEvent"方法 -->
+<component-scan bindmyevent ="onMyEvent"/>
+<!-- 或者 -->
+<component-scan bind:myevent="onMyEvent"/>
