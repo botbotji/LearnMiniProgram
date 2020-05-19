@@ -1,0 +1,5 @@
+/* component/component-tag-name/component-tag-name.wxss */
+:host{
+  color: yellow;
+  font-size: 20rpx;
+}

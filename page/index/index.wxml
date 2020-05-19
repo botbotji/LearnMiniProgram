@@ -1,5 +1,22 @@
 <!--page/index/index.wxml-->
-<text class="title">Hello World</text>
-<button size="mini">按钮</button>
-<image src=""></image>
-<view>测试Git tag方式提交</view>
+
+<view>该自定义组件传递数据</view>
+<component-scan title="哈哈哈" titleclass="red"></component-scan>
+<component-scan title="好好好" titleclass="green"></component-scan>
+<component-scan titleclass="yellow"></component-scan>
+
+<!-- 自定义事件++组件内部发生 -->
+<view>当前计数：{{count}}</view>
+<component-bind  bind:count="handlerCount"></component-bind>
+<view>{{name}}:{{age}}</view>
+
+<!-- slot插槽 -->
+<view>
+  <component-tag-name propa="dataFileA" propb="dataFileB">
+     <!-- 这部分内容将被放置在组件 <slot> 的位置上 -->
+    <view>这里是插入到组件slot中的内容</view>
+    <!-- 这里也就是说再多个slot插槽时，组件中使用name属性辨别在在页面中使用，其出现渲染屏幕的位置 -->
+    <view slot="before">这里是插入到组件slot name="before"中的内容</view>
+    <view slot="after">这里是插入到组件slot name="after"中的内容</view>
+  </component-tag-name>
+</view>

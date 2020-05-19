@@ -1,0 +1,3 @@
+<!--component/component-bind/component-bind.wxml-->
+<view></view>
+<button size="mini" bindtap="handlerCount">+1</button>

@@ -1,0 +1,9 @@
+<!--component/component-tag-name/component-tag-name.wxml-->
+<view class="wrapper">
+  <slot name="before"></slot>
+  <view>这里是组件的内部节点</view>
+  <view class="propa propb">{{propa}}++++++++{{propb}}</view>
+  <slot name="after"></slot>
+</view>
+
+
