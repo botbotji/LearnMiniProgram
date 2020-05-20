@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "component-behaviors":"/component/component-behaviors/component-behaviors",
+    "w-tab-control":"/component/w-tab-control/w-tab-control",
+    "myself":"/component/myself/myself"
+  },
+  "navigationBarTitleText": "百货商城"
 }

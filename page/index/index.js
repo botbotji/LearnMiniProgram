@@ -62,5 +62,21 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  handlerIndex:function(event){
+    console.log(event)
+  },
+  handlertap:function(){
+    //修改组件中myself的数据
+    const my_self = this.selectComponent('#self') //拿到组件的初始化数据
+    //数据位于my_self对象的data中
+    console.log(my_self)
+    //设置值
+    // my_self.setData({
+    //   count: my_self.data.count+1
+    // })
+
+    //调用特定的自定义方法
+    my_self.incrementCount(10)
   }
 })

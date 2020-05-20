@@ -1,0 +1,13 @@
+<!--component/w-tab-control/w-tab-control.wxml-->
+<view class='tab-control'>
+  <!-- <view class="item" bindtap="halderstyle">流行</view>
+  <view class="item">新款</view>
+  <view class="item">精选</view> -->
+  <block wx:for="{{titles}}" wx:key="{{index}}">
+    <view class="item {{currentindex == index ? 'active' : ''}}"
+          bindtap="handlerIndex"
+          data-index="{{index}}">
+      <text>{{item}}</text>
+    </view>
+  </block>
+</view>

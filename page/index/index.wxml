@@ -1,5 +1,15 @@
 <!--page/index/index.wxml-->
-<text class="title">Hello World</text>
-<button size="mini">按钮</button>
-<image src=""></image>
+<view>
+  <w-tab-control/>
+</view>
+<view>
+   <w-tab-control titles="{{['衣服','鞋子','裤子']}}"
+                  bind:handlerIndex="handlerIndex"/>
+</view>
+
+<view>
+  <button size="mini" bindtap="handlertap">修改组件内的样式</button>
+  <myself id="self"/>
+</view>
 <view>测试Git tag方式提交</view>
+<component-behaviors/>

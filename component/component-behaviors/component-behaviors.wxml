@@ -1,0 +1,9 @@
+<!--component/component-behaviors/component-behaviors.wxml-->
+<text>component/component-behaviors/component-behaviors.wxml</text>
+<!-- 我是组件 -->
+<!-- 我是demoBehavior里面的方法以及数据 -->
+<button bindtap='myDemoBehaviorMethod'>{{myDemoBehaviorData}}</button>
+<!-- 我是引入在demoBehavior中的公用数据以及方法 -->
+<button bindtap='myClickChildBehavior'>{{myDataChildrenBehaviors}}</button>
+<!-- 我是模拟 demoBehavior多个数据与方法 这个会省略但是会在添加在代码解释当中-->
+<button bindtap='myDemo'>{{myDataDemo}}</button>
