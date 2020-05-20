@@ -1,5 +1,8 @@
 <!--page/index/index.wxml-->
-<text class="title">Hello World</text>
-<button size="mini">按钮</button>
-<image src=""></image>
-<view>测试Git tag方式提交</view>
+
+<view>弹窗测试</view>
+
+<button size="mini" bind:tap="handlershowToast">showToast</button>
+<button size="mini" bind:tap="handlershowModal">showModal</button>
+<!-- 分享按钮 -->
+<button open-type="share">分享</button>

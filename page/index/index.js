@@ -61,6 +61,20 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
-  }
+      return
+  },
+  handlershowToast:function(){
+    wx.showToast({
+      title: '提示',
+      icon: "loading"
+    })
+  },
+  handlershowModal:function(){
+      wx.showModal({
+        title:"title",
+        content:"content",
+        cancelColor: 'cancelColor',
+      })
+    }
+  
 })
