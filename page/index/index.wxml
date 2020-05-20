@@ -1,5 +1,20 @@
 <!--page/index/index.wxml-->
-<text class="title">Hello World</text>
-<button size="mini">按钮</button>
-<image src=""></image>
-<view>测试Git tag方式提交</view>
+<!-- 默认navigator 没关闭当前页面 -->
+<navigator url="/page/detail/detail?name=张翰&age=18&sex=男">跳到详情页</navigator>
+
+<!-- open-type="redirect" 重定向的跳转方式，不会关闭页面 -->
+<navigator url="/page/detail/detail"
+            open-type="redirect">重定向跳到详情页</navigator>
+
+<!-- 页面内跳转到tabber 的位置 -->
+<!-- 注意这里的url路径必须以/开头 -->
+<!--  只有页面在tabBar中注册才能在，其注册的页面显示，也就是说没注册的不会在显示底部的tabbar -->
+<navigator url="/page/about/aabout" open-type="switchTab">页面内跳转switchTab</navigator>
+
+<!-- relaunch 这种跳转方式会关闭所有的页面，只显示当前跳转的 -->
+<navigator url="/page/detail/detail" open-type="reLaunch">页面内跳转reLaunch</navigator>
+
+<view>{{title}}</view>
+
+<!-- 通过代码进行页面跳转 -->
+<button size="mini" bind:tap="handlertap">跳转</button>

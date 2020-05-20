@@ -1,0 +1,5 @@
+<!--page/detail/detail.wxml-->
+<text>page/detail/detail.wxml</text>
+<!-- 默认navigator方式跳转有效 -->
+<navigator url="/page/about/aabout">跳转</navigator>
+<navigator open-type="navigateBack">返回</navigator>

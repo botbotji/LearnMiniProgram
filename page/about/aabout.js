@@ -1,11 +1,11 @@
-// page/index/index.js
+// page/about/aabout.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title:'哈哈啊哈'
+
   },
 
   /**
@@ -38,7 +38,6 @@ Page({
 
   /**
    * 生命周期函数--监听页面卸载
-   * 退出页面
    */
   onUnload: function () {
 
@@ -64,9 +63,4 @@ Page({
   onShareAppMessage: function () {
 
   }
-  // handlertap:function(){
-  //   wx.redirectTo({
-  //     url: '/page/detail/detail'
-  //   })
-  // }
 })

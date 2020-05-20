@@ -1,18 +1,18 @@
-// page/index/index.js
+// page/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title:'哈哈啊哈'
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
   },
 
   /**
@@ -38,10 +38,18 @@ Page({
 
   /**
    * 生命周期函数--监听页面卸载
-   * 退出页面
    */
   onUnload: function () {
-
+      //获取当前页面的对象
+      const pages = getCurrentPages()
+      console.log(pages)
+      console.log(pages[0])
+      //由于这里的索引值不能写死 所以采用 pages.length - 2这种方式
+      //const home = pages[0]
+      const home = pages[pages.length - 2]
+      home.setData({
+        title: '呵呵二号'
+      })
   },
 
   /**
@@ -64,9 +72,4 @@ Page({
   onShareAppMessage: function () {
 
   }
-  // handlertap:function(){
-  //   wx.redirectTo({
-  //     url: '/page/detail/detail'
-  //   })
-  // }
 })
