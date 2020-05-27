@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "w-swiper":"/component/w-swiper/w-swiper",
+    "w-recommend":"./childCapns/w-recommend/w-recommend"
+  },
+  "navigationBarTitleText": "阿尔提尔商城"
 }

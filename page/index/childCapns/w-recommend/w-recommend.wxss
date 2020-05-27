@@ -1,0 +1,21 @@
+/* page/index/childCapns/w-recommend.wxss */
+.recommend{
+  display: flex;
+  /* margin: 40rpx;   */
+  margin-top: 20rpx;
+  justify-content: center;
+  border-bottom: 16rpx solid #eee;
+  padding-bottom: 20rpx;
+}
+.recommend-item{
+  flex: 1;
+  text-align: center;
+}
+.recommend-item image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.recommend-item view{
+  font-size: 30rpx;
+  color: #555;
+}

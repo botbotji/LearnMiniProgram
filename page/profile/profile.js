@@ -1,35 +1,18 @@
-// page/index/index.js
-import request from '../../seroort/network'
-// import getMultiData from '../../seroort/index'
-
+// page/profile/profile.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    banners:[],
-    recommends:[]
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    request({
-        url: 'http://123.207.32.32:8000/home/multidata'
-       }).then(res =>{
-        console.log(res)
-        const banners = res.data.data.banner.list;
-        const recommends = res.data.data.recommend.list;
-        console.log(banners)
-        console.log(recommends)
-        this.setData({
-            banners:banners,
-            recommends:recommends
-        })
-      })
- 
+
   },
 
   /**
